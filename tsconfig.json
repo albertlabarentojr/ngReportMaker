@@ -19,6 +19,11 @@
         "./src/app.config.ts",
         "./src/config.ts",
         "./src/app.ts",
+        "./src/app/components/DropZoneInterfaces.ts",
+        "./src/app/components/ToolsDraggable.ts",
+        "./src/app/components/DropZone.ts",
+        "./src/app/components/PaperDropZone.ts",
+        "./src/app/components/ToolboxDropZone.ts",
         "./src/app/ReportMakerService.ts",
         "./src/app/report.maker.directive.ts"
     ]

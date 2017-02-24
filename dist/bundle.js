@@ -41,10 +41,10 @@ var App;
 })(App || (App = {}));
 var App;
 (function (App) {
-    var Service;
-    (function (Service) {
-        var ToolsDrappable = (function () {
-            function ToolsDrappable(draggableClass) {
+    var Components;
+    (function (Components) {
+        var ToolsDraggable = (function () {
+            function ToolsDraggable(draggableClass) {
                 var _this = this;
                 if (draggableClass === void 0) { draggableClass = '.draggable'; }
                 this.config = {
@@ -84,8 +84,15 @@ var App;
                 };
                 interact(draggableClass).draggable(this.buildConfig());
             }
-            return ToolsDrappable;
+            return ToolsDraggable;
         }());
+        Components.ToolsDraggable = ToolsDraggable;
+    })(Components = App.Components || (App.Components = {}));
+})(App || (App = {}));
+var App;
+(function (App) {
+    var Components;
+    (function (Components) {
         var DropZone = (function () {
             function DropZone(dropZoneName) {
                 var _this = this;
@@ -122,6 +129,49 @@ var App;
             };
             return DropZone;
         }());
+        Components.DropZone = DropZone;
+    })(Components = App.Components || (App.Components = {}));
+})(App || (App = {}));
+var App;
+(function (App) {
+    var Components;
+    (function (Components) {
+        var PaperDropZone = (function (_super) {
+            __extends(PaperDropZone, _super);
+            function PaperDropZone() {
+                _super.call(this, '.paper');
+                this.build({
+                    ondropactivate: this.ondropactivate,
+                    ondragenter: this.ondragenter,
+                    ondragleave: this.ondragleave,
+                    ondrop: this.ondrop,
+                    ondropdeactivate: this.ondropdeactivate
+                });
+            }
+            PaperDropZone.prototype.ondropactivate = function (even) {
+                _super.prototype.ondropactivate.call(this, event);
+            };
+            PaperDropZone.prototype.ondragenter = function (event) {
+                _super.prototype.ondragenter.call(this, event);
+            };
+            PaperDropZone.prototype.ondragleave = function (event) {
+                _super.prototype.ondragleave.call(this, event);
+            };
+            PaperDropZone.prototype.ondrop = function (event) {
+                _super.prototype.ondrop.call(this, event);
+            };
+            PaperDropZone.prototype.ondropdeactivate = function (event) {
+                _super.prototype.ondropdeactivate.call(this, event);
+            };
+            return PaperDropZone;
+        }(Components.DropZone));
+        Components.PaperDropZone = PaperDropZone;
+    })(Components = App.Components || (App.Components = {}));
+})(App || (App = {}));
+var App;
+(function (App) {
+    var Components;
+    (function (Components) {
         var ToolboxDropZone = (function (_super) {
             __extends(ToolboxDropZone, _super);
             function ToolboxDropZone() {
@@ -150,40 +200,20 @@ var App;
                 _super.prototype.ondropdeactivate.call(this, event);
             };
             return ToolboxDropZone;
-        }(DropZone));
-        var PaperDropzone = (function (_super) {
-            __extends(PaperDropzone, _super);
-            function PaperDropzone() {
-                _super.call(this, '.paper');
-                this.build({
-                    ondropactivate: this.ondropactivate,
-                    ondragenter: this.ondragenter,
-                    ondragleave: this.ondragleave,
-                    ondrop: this.ondrop,
-                    ondropdeactivate: this.ondropdeactivate
-                });
-            }
-            PaperDropzone.prototype.ondropactivate = function (even) {
-                _super.prototype.ondropactivate.call(this, event);
-            };
-            PaperDropzone.prototype.ondragenter = function (event) {
-                _super.prototype.ondragenter.call(this, event);
-            };
-            PaperDropzone.prototype.ondragleave = function (event) {
-                _super.prototype.ondragleave.call(this, event);
-            };
-            PaperDropzone.prototype.ondrop = function (event) {
-                _super.prototype.ondrop.call(this, event);
-            };
-            PaperDropzone.prototype.ondropdeactivate = function (event) {
-                _super.prototype.ondropdeactivate.call(this, event);
-            };
-            return PaperDropzone;
-        }(DropZone));
+        }(Components.DropZone));
+        Components.ToolboxDropZone = ToolboxDropZone;
+    })(Components = App.Components || (App.Components = {}));
+})(App || (App = {}));
+var App;
+(function (App) {
+    var Service;
+    (function (Service) {
+        var ToolsDraggable = App.Components.ToolsDraggable;
+        var ToolboxDropZone = App.Components.ToolboxDropZone;
         var ReportMakerService = (function () {
             function ReportMakerService() {
                 this.init = function () {
-                    (new ToolsDrappable());
+                    (new ToolsDraggable());
                     (new ToolboxDropZone());
                 };
                 this.init();
