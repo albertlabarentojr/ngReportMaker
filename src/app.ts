@@ -1,5 +1,5 @@
 
-let ngModule = angular.module(App.Config.Ng.module.name, App.Config.Ng.module.dependencies);
+let ngModule : ng.IModule = angular.module(App.Config.Ng.module.name, App.Config.Ng.module.dependencies);
 
 module App.Main {
 

@@ -4,7 +4,10 @@
   "description": "Template report maker using angular js, interact.js, typscript, webpack",
   "main": "webpack.config.js",
   "dependencies": {
-    "angular": "^1.6.2"
+    "angular": "^1.6.2",
+    "interactjs": "^1.2.8",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "webpack": "^1.12.14"

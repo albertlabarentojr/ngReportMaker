@@ -19,6 +19,7 @@
         "./src/app.config.ts",
         "./src/config.ts",
         "./src/app.ts",
+        "./src/app/ReportMakerService.ts",
         "./src/app/report.maker.directive.ts"
     ]
 }
