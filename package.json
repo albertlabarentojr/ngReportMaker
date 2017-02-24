@@ -1,0 +1,17 @@
+{
+  "name": "ng-report-maker",
+  "version": "1.0.0",
+  "description": "Template report maker using angular js, interact.js, typscript, webpack",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "angular": "^1.6.2"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "albertlabarento@gmail.com",
+  "license": "ISC"
+}

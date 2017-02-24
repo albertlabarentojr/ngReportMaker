@@ -1,0 +1,96 @@
+#################################################
+# 						                        #
+# Angular Report Template Maker			        #
+# Built with Angular + Typescript + Webpack	    #
+#						                        #
+#################################################
+
+1. .tsconfig
+
+{
+    "compilerOptions": {
+        "module": "system",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "./dist/bundle.js",
+        "sourceMap": true,
+        "allowSyntheticDefaultImports" : true,
+        "allowJs" : true,
+        "allowUnreachableCode" : true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "files" : [
+	    "./src/app.config.ts",
+        "./src/config.ts",
+        "./src/app.ts"
+        ... 
+    ]
+}
+
+2. webpack.config.js
+
+var webpack = require('webpack'); 
+
+module.exports = {
+    entry : [
+       // contains node_modules export resource
+    ],
+    output : {
+        filename : './dist/lib.js'
+    },
+    resolve : {
+        extensions : ['', '.webpack.js', '.web.js', '.ts', '.js', '.min.js']
+    },
+    module :{
+        loaders : [
+        //    { test: /\.ts$/, loader: 'ts-loader' }
+        ]
+    },
+    plugins : [
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
+    ]
+}
+
+
+3. create scaffold
+	css
+	|
+	dist
+	|
+	-- bundle.js // transpiled source code
+	   bundle.js.map
+	   lib.js // minified lib resources
+	|
+	img
+	|
+	lib
+	|
+	src
+	|
+	-- base
+	-- config
+		-- app.config.ts
+	-- directives
+	-- events
+	-- interfaces
+	-- modules
+	-- repositories
+	-- services 
+	|
+	-- app.ts
+	-- config.sample.ts 
+	-- config.ts // should be git ignored
+	|
+	| 
+	package.json
+	tsconfig.json
+	tsd.json
+	webpack.config.js
+
