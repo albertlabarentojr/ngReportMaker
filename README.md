@@ -1,3 +1,10 @@
+## Report Template Maker (ngReportMaker)
+
+Build with AngularJs + Typescript
+
+
+An angular directive that allows you to create a customized report template.
+
 ## Installation
 
 1. ``npm install``
