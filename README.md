@@ -5,3 +5,5 @@
     * **Run** ``webpack``
 3. Install typings
     * **Run** ``tsd install``
+4. Sample
+  
