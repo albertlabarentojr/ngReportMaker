@@ -212,11 +212,10 @@ var App;
         var ToolboxDropZone = App.Components.ToolboxDropZone;
         var ReportMakerService = (function () {
             function ReportMakerService() {
-                this.init = function () {
+                this.run = function () {
                     (new ToolsDraggable());
                     (new ToolboxDropZone());
                 };
-                this.init();
             }
             ReportMakerService.$inject = [];
             return ReportMakerService;
@@ -245,6 +244,7 @@ var App;
                 this.templateUrl = function () {
                     return './src/templates/box.container.tpl.html';
                 };
+                this.ReportMakerService.run();
             }
             ReportMakerDirective.factory = function () {
                 var directive = function ($timeout, ReportMakerService) { return new ReportMakerDirective($timeout, ReportMakerService); };

@@ -23,7 +23,7 @@ module App.Directive {
             private $timeout : ng.ITimeoutService,
             private ReportMakerService : App.Service.ReportMakerService
         ){
-
+            this.ReportMakerService.run();
         }
 
         static factory() : ng.IDirectiveFactory

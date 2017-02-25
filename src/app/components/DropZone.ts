@@ -3,7 +3,7 @@ module App.Components {
 
     import Interfaces = App.Interfaces;
     
-    export class DropZone  implements Interfaces.IDropZone, Interfaces.IDropZoneCallbacks{
+    export class DropZone implements Interfaces.IDropZone, Interfaces.IDropZoneCallbacks{
 
         dropZoneName : string;
 
@@ -30,7 +30,6 @@ module App.Components {
             var draggableElement = event.relatedTarget,
             dropzoneElement = event.target;
 
-            // feedback the possibility of a drop
             dropzoneElement.classList.add('drop-target');
             draggableElement.classList.add('can-drop');
             draggableElement.textContent = 'Dragged in';

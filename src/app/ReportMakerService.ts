@@ -13,12 +13,7 @@ module App.Service {
 
         static $inject : string[] = [];
 
-
-        constructor(){
-            this.init();
-        }
-
-        init = () => {
+        run = () => {
             (new ToolsDraggable());
             (new ToolboxDropZone());
             // (new PaperDropZone());
