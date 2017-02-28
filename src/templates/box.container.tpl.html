@@ -1,8 +1,18 @@
-<div id="no-drop" class="draggable drag-drop"> #no-drop </div>
 
-<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+    <div class="col-md-3 side-menu">
+	    <span><strong><h1>Component box</h1></strong></span>
+		<div id="no-drop" class="draggable drag-drop item"> #no-drop </div>
+		<div id="yes-drop" class="draggable drag-drop item"> #yes-drop </div>
+    </div>
+	<div id="outer-dropzone" class="dropzone">
+	    outer
+	    <div id="inner-dropzone" class="dropzone">Letter Sized Paper</div>
+    </div>
 
-<div id="outer-dropzone" class="dropzone">
-  #outer-dropzone
-  <div id="inner-dropzone" class="dropzone">#inner-dropzone</div>
- </div>
+ <button class="btn btn-primary print-btn">
+ 	Print
+ </button>
+
+ <span class="delete-item">
+ 	<i class="fa fa-trash fa-4x" aria-hidden="true"></i>
+ </span>

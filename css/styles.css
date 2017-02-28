@@ -1,22 +1,38 @@
-/*
-    Sample Demo styles
-*/
+
+html{
+   overflow-y: hidden;
+}
+
 #outer-dropzone {
-  height: 140px;
+  height: 100%;
+  border-radius: 0px;
+  position: absolute;
+  z-index:-1;
+  right: 0px;
+  width: 74%;
+  margin-right: 5px;
+  overflow-y: scroll;
 }
 
 #inner-dropzone {
-  height: 80px;
+  height: 750px;
+  width: 563px;
+
+  background-color: #ECF0F1;
+  border-radius: 0px;
+  margin-right: 20%;
+  overflow-y: hidden;
 }
 
 .dropzone {
   background-color: #ccc;
   border: dashed 4px transparent;
   border-radius: 4px;
-  margin: 10px auto 30px;
+  margin: 5px auto 30px;
   padding: 10px;
-  width: 80%;
+  width: 100%;
   transition: background-color 0.3s;
+  float: right;
 }
 
 .drop-active {
@@ -54,7 +70,6 @@
   height: 100%;
   min-height: 6.5em;
   margin: 10%;
-
   background-color: #29e;
   color: white;
 
@@ -68,4 +83,47 @@
 #drag-me::before {
   content: "#" attr(id);
   font-weight: bold;
+}
+
+
+.side-menu{
+  height: 100%;
+  border: 1px solid #ABB7B7;
+  position: absolute;
+  left: 0;
+  width: 25%;
+  background-color: #ECECEC;
+}
+
+.form-container{
+    height: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.print-btn{
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  width: 100px;
+  border-radius: 0px;
+}
+
+.delete-item{
+  position: absolute;
+  right: 5%;
+  bottom: 15px;
+  width: 100px;
+  padding: 10px;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+.delete-item:hover{
+  font-size: 30px;
+  -webkit-transition: all 700ms ease;
+  -moz-transition: all 700ms ease;
+  -ms-transition: all 700ms ease;
+  -o-transition: all 700ms ease;
+  transition: all 700ms ease;
 }
