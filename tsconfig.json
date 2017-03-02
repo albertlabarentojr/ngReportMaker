@@ -14,6 +14,7 @@
         "node_modules"
     ],
     "files" : [
+        "./src/app/contracts/ComponentContract.ts",
         "./src/interfaces/IConfiguration.ts",
         "./src/interfaces/IAppConstants.ts",
         "./src/app.config.ts",
@@ -25,6 +26,10 @@
         "./src/app/components/PaperDropZone.ts",
         "./src/app/components/ToolboxDropZone.ts",
         "./src/app/services/ReportMakerService.ts",
-        "./src/app/directives/report.maker.directive.ts"
+        "./src/app/directives/report.maker.directive.ts",
+
+        "./src/app/directives/header.component.ts",
+
+
     ]
 }
