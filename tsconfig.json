@@ -24,7 +24,7 @@
         "./src/app/components/DropZone.ts",
         "./src/app/components/PaperDropZone.ts",
         "./src/app/components/ToolboxDropZone.ts",
-        "./src/app/ReportMakerService.ts",
-        "./src/app/report.maker.directive.ts"
+        "./src/app/services/ReportMakerService.ts",
+        "./src/app/directives/report.maker.directive.ts"
     ]
 }

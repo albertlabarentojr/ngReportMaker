@@ -1,4 +1,5 @@
 
+
 module App.Components {
 
     import Interfaces = App.Interfaces;
@@ -45,6 +46,10 @@ module App.Components {
         ondropdeactivate(event : any){
             event.target.classList.remove('drop-active');
             event.target.classList.remove('drop-target');
+        }
+
+        deleteDropzone(event: any, el : any){
+          console.log("Deleted");
         }
     }
 

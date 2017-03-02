@@ -35,13 +35,24 @@ html{
   float: right;
 }
 
+.paperbg{
+    background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 5px auto 30px;
+  padding: 10px;
+  width: 100%;
+  transition: background-color 0.3s;
+  float: right;
+}
+
 .drop-active {
   border-color: #aaa;
 }
 
 .drop-target {
-  background-color: #29e;
-  border-color: #fff;
+  background-color: #ccc;
+  border-color: #29e;
   border-style: solid;
 }
 
@@ -51,7 +62,7 @@ html{
   padding: 2em 0.5em;
 
   color: #fff;
-  background-color: #29e;
+  background-color:  #29e;
   border: solid 2px #fff;
 
   -webkit-transform: translate(0px, 0px);
