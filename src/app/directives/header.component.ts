@@ -13,11 +13,10 @@ module App.Directives{
             dataBinding: '<',
             functionBinding: '&'
           };
+
           this.templateUrl = './src/templates/tools/header.tpl.html';
        }
-       headerTemplate(){
-          return this.templateUrl;
-       }
 	}
-  ngModule.component('headerComponent',new HeaderComponent().headerTemplate());
+  
+  ngModule.component('headerComponent',new HeaderComponent());
 }
