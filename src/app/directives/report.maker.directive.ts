@@ -1,6 +1,6 @@
 
 
-module App.Directive {
+module App.Directives {
 
     interface IScope {
         name : string;
